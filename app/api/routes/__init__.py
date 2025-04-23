@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from app.api.routes import auth,seed
 from app.modules.role import role_router
 from app.modules.user import user_router
+from app.modules.stock import stock_router
 
 
 
@@ -12,3 +13,5 @@ routes.include_router(seed.router, prefix="/seed", tags=["Seed"])
 routes.include_router(auth.router, prefix="/auth", tags=["Auth"])
 routes.include_router(role_router.router, prefix="/roles", tags=["Roles"])
 routes.include_router(user_router.router, prefix="/users", tags=["Users"])
+routes.include_router(stock_router.router, prefix="/stocks", tags=["Stocks"])
+
