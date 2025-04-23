@@ -33,13 +33,15 @@ origins = [
     "http://209.105.242.30:7778", # live frontend URL
     "https://demo.avirise.in",
     "http://localhost:3000",
-    "https://your-frontend-domain.com" #live url
+    "https://your-frontend-domain.com",
+    "https://dynamic-portfolio-63fi.vercel.app",#live url
 
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    # allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
