@@ -27,4 +27,5 @@ class UserModel(Base):
 
     # roles = relationship("Role", backref="users_with_role", foreign_keys=[role_id])
     roles = relationship("RoleModel", back_populates="users")
-
+    # Inside UserModel
+    stocks = relationship("StockModel", back_populates="user")
